@@ -27,6 +27,8 @@ class DLinked_list{
     void deleteNodeFromBegining();
     void addNodeAtTheEnd(T);
     void deleteNodeFromTheEnd();
+    template class<U>
+    friend ostream& operator << (ostream&, const DLinked_list<U>&);
 };
 template<class T>
 DLinked_list<T> :: ~DLinked_list(){
@@ -94,4 +96,12 @@ void DLinked_list<T> :: deleteNodeFromTheEnd(){
         temp2->setNext(NULL);
         delete temp;
     }
+}
+template <class U>
+ostream& operator << (ostream& out, const DLinked_list<U>& lst){
+    Node<U>* temp = head;
+    while(temp){
+        out << temp->getData() << " ";
+    }
+    return out;
 }
