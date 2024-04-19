@@ -12,7 +12,7 @@ class TemplateArray{
     static const int DefaultArraySize = 1;
 
     // constructors
-    TemplateArray(int capacity = DefaultArraySize); // default constructor
+    TemplateArray(long capacity = DefaultArraySize); // default constructor
     TemplateArray(T *thisArray, long thisArraySize); // parameterised constructor
     TemplateArray(const TemplateArray <T>&); // copy constructor
 
